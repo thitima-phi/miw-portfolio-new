@@ -23,7 +23,9 @@ Visit http://127.0.0.1:8771.
 
 ## Content and behaviour
 
-17 project entries expose all 15 original image collections and two video collections (four videos). Client filters, full-size galleries, contribution notes, experience, university background, email links and the original resume are included. Project metadata is in `script.js`; original gallery records are in `collections.js`. Assets are independent copies, not links back to the existing portfolio.
+15 project entries follow the original work-section layout, grouped into Sonar Audiobooks and Merick Polymers & Leaf Pac. Paired designs, multi-image previews, wide collections and four inline videos retain the original order and proportions. All 15 image galleries remain accessible. Project markup is in `index.html`; gallery records are in `collections.js`. Client filters, contribution notes, experience, university background, email links and the original resume are included. Assets are independent copies, not links back to the existing portfolio.
+
+Arrows use SVG rather than font glyphs. The headline enters in staggered lines, the artwork fans into place and gently floats, and projects have stronger scroll reveals. A Pause motion / Resume motion control is available; floating stops while the desk is offscreen. Reduced-motion preferences disable animations and transitions and keep all content visible. Without JavaScript, all project content and native video controls remain available.
 
 Published independently with GitHub Pages from the `main` branch. No claims of performance uplift, published research or authorship of third-party book covers and mascots are added.
 
@@ -33,6 +35,7 @@ With the local server running and Python Playwright/Chromium available:
 
 ```sh
 python3 check_browser.py
+python3 test_ui_regressions.py
 ```
 
 Checks cover project filters, every gallery, keyboard navigation, video cleanup, the resume, collection asset existence, JavaScript errors and horizontal overflow at 320, 390, 768, 1024 and 1440 pixels. The script also saves desktop, mobile and full-page screenshots. Preview screenshots and this Python check script are local review materials and need not be deployed.
